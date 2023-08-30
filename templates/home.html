@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 75vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .content {
+            display: inline-block;
+            margin-top: 5%;
+            text-align: left;
+            padding: 25px;
+            background-color: rgba(255, 255, 255, 0.45); 
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Welcome to Face Mask Detection App</h1>
+        <p>Upload an image to detect if a person is wearing a mask or not.</p>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="image">
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+</body>
+</html>
